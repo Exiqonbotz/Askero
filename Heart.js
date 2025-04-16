@@ -1,4 +1,4 @@
-const { BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType } = require('@whiskeysockets/baileys')
+const { BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType } = require('baileys')
 const os = require('os')
 const fs = require('fs')
 const fsx = require('fs-extra')
@@ -1894,7 +1894,7 @@ ${readmore}
      
        case 'circlevideo': {
 try {
-const Mariabaileys = await require("@whiskeysockets/baileys").generateWAMessageContent({ video: await m.quoted.download() }, { upload: Maria.waUploadToServer })
+const Mariabaileys = await require("baileys").generateWAMessageContent({ video: await m.quoted.download() }, { upload: Maria.waUploadToServer })
 await Maria.relayMessage(from, { ptvMessage: { ...Mariabaileys.videoMessage } }, {})
 } catch (err) {
 reply(`Reply to a Video with Caption ${prefix + command}`)
